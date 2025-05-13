@@ -7,7 +7,7 @@ A RESTful Web API built with **.NET 8** that integrates with the public mock API
 
 ## 🚀 Features
 
-- 🔗 Integration with [https://restful-api.dev](https://restful-api.dev)
+- 🔗 Integration with [https://api.restful-api.dev](https://restful-api.dev)
 - 🔍 Filter products by name substring
 - 📃 Pagination support for product listing
 - ➕ Add new product to the mock API
@@ -23,7 +23,6 @@ A RESTful Web API built with **.NET 8** that integrates with the public mock API
 
 - [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - ASP.NET Core Web API
-- StackExchange.Redis
 - Microsoft.Extensions.Caching.StackExchangeRedis
 - Swagger (Swashbuckle)
 - DataAnnotations for validation
@@ -43,7 +42,7 @@ A RESTful Web API built with **.NET 8** that integrates with the public mock API
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/SimpleRestfulWebAPI.git
+   git clone https://github.com/nehashah264/SimpleRestfulWebAPI.git
    cd SimpleRestfulWebAPI
    ```
 
@@ -61,7 +60,7 @@ A RESTful Web API built with **.NET 8** that integrates with the public mock API
    ```json
    "Redis": {
      "ConnectionString": "localhost:6379",
-     "InstanceName": "SimpleRestfulWebAPI_"
+     "Password": "" 
    }
    ```
 
@@ -115,7 +114,8 @@ Delete a product by its `id`.
 
 ## 🧠 Redis Caching
 
-- All product list queries are cached based on their filter and paging parameters.
+- All product list queries are cached and then filtered and paged.
+- Reset caching on any updated data.
 - Configurable via `appsettings.json`.
 
 ---
@@ -134,22 +134,6 @@ Delete a product by its `id`.
 
 ---
 
-## 📁 Project Structure
-
-```
-SimpleRestfulWebAPI/
-├── Controllers/
-├── Services/
-├── Caching/
-├── Middleware/
-├── Models/
-├── Program.cs
-├── appsettings.json
-└── README.md
-```
-
----
-
 ## 📄 License
 
 MIT License. See [LICENSE](LICENSE) for details.
@@ -165,5 +149,4 @@ Pull requests are welcome! Feel free to open issues or suggest features.
 ## 🙋‍♀️ Author
 
 **Neha Shah**  
-👩‍💻 .NET Developer | 17+ Years Experience  
-📫 [Your contact or GitHub profile link here]
+👩‍💻 Fullstack Expert

@@ -9,7 +9,9 @@ namespace SimpleRestfulWebAPI.Validators
         {
             RuleFor(x => x.Name)
                 .NotEmpty()
-                .WithMessage("Product Name is required.");
+                .WithMessage("Product Name is required.")
+                .MaximumLength(150)
+                .WithMessage("Product Name cannot exceed for more than 150 characters!");
 
             RuleFor(x => x.Data)
               .NotEmpty()
