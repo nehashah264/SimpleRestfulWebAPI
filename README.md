@@ -26,6 +26,7 @@ A RESTful Web API built with **.NET 8** that integrates with the public mock API
 - Microsoft.Extensions.Caching.StackExchangeRedis
 - Swagger (Swashbuckle)
 - DataAnnotations for validation
+- Fluent Validation
 
 ---
 
